@@ -17,40 +17,91 @@ help; - displays MySQL commands
 show databases; - displays database available
 select @@hostname; - displays host available
 
+------------------------------
+
+S03-L23 Creating Database
+
+show databases; - displays all available databases
+
+CREATE DATABASE <name>; - creates new database
+
+------------------------------
+
+S03-L25 Dropping Databases (Deleting Database)
+
+DROP DATABASE <name>; - deletes database
+
+------------------------------
+
+S03-L27 Using Database
+
+USE <name>; - tells MySQL to use a particular database
+SELECT database(); - tells what database is currently used
 
 
 
 ------------------------------
 
+S03-L29 Intro to Tables
 
+Database is just a bunch of tables (in relational database at least).
+Tables hold the data.
 
-------------------------------
+CAT'S TABLE EXAMPLE
+---------------------------
+Name    Breed           AGE
+Blue    Scottish Fold   1
+Rocket  Persian         3
+Monty   Tabby           10
+Sam     Munchkin        5
 
-
-
-------------------------------
-
-
-
-------------------------------
-
-
-
-------------------------------
-
-
+COLUMN - refers to the headers (Name, Breed, Age)
+ROWS - actual data
 
 ------------------------------
 
+S03-L29 Basic Datatypes
 
+There are lots of datatypes but common datatypes are:
+INT
+VARCHAR
+
+Examples:
+username varchar(15)
+content varchar(140)
+favorites int
 
 ------------------------------
 
+S03-L33 Creating Tables
 
+CREATE TABLE tablename
+(
+    column_name data_type,
+    column_name data_type
+);
+
+Example:
+
+CREATE TABLE cats
+(
+    name VARCHAR(100),
+    age INT
+);
 
 ------------------------------
 
+S03-L35 How to check tables info
 
+SHOW TABLES; - displays table name
+SHOW COLUMNS FROM <tablename>; - displays columns or headers of a table.
+DESC <tablename>; - shorter way to display columns or headers of a table.
+
+------------------------------
+
+S03-L37 DELETING TABLES
+
+DROP TABLE <name>; - deletes table
 
 ------------------------------
 
